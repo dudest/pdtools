@@ -67,9 +67,9 @@
 #X text 424 400 f(x)=cos((x-pi)*0.5);
 #X obj 879 433 f \$2;
 #X obj 879 489 makefilename \$1-channel%d;
-#X obj 879 513 prepend set;
 #X obj 879 403 loadbang;
 #X obj 879 461 mod \$3;
+#X msg 879 516 set \$1;
 #X connect 0 0 12 0;
 #X connect 1 0 59 0;
 #X connect 2 0 0 0;
@@ -140,8 +140,8 @@
 #X connect 60 0 36 1;
 #X connect 61 0 41 1;
 #X connect 63 0 9 0;
-#X connect 66 0 70 0;
-#X connect 67 0 68 0;
-#X connect 68 0 64 0;
-#X connect 69 0 66 0;
-#X connect 70 0 67 0;
+#X connect 66 0 69 0;
+#X connect 67 0 70 0;
+#X connect 68 0 66 0;
+#X connect 69 0 67 0;
+#X connect 70 0 64 0;
