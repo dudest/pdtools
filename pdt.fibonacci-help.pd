@@ -1,0 +1,10 @@
+#N canvas 0 22 450 300 10;
+#X obj 121 197 pdt.fibonacci;
+#X obj 121 224 print fib;
+#X obj 121 156 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 196 157 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;

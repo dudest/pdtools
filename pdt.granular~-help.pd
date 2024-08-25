@@ -1,0 +1,89 @@
+#N struct 1038-samplewindow float x float y array 1038-windowtemplate
+1038-window;
+#N struct 1038-window float x float y;
+#N canvas 369 38 813 673 10;
+#X obj 404 79 grid grid2 100 0 1 100 0 1 1 0.01 0.01 5 5 411 177;
+#X obj 404 291 pack f f f;
+#X obj 432 196 t f b;
+#X obj 498 220 + 1;
+#X obj 461 221 f 1;
+#X obj 538 220 % 12;
+#X obj 461 250 - 6;
+#X obj 629 264 * 0.01;
+#X obj 727 245 random 24;
+#X obj 727 270 - 12;
+#X obj 670 303 pack f f f;
+#X obj 679 199 t b f b;
+#X obj 682 168 hsl 101 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 629 238 random 10;
+#X msg 464 375 bang;
+#X text 409 348 resets all the voices;
+#X msg 579 400 bang;
+#X text 527 374 bang to load a sound file;
+#X obj 2 9 cnv 15 800 40 empty empty pdt.granular~ 20 12 0 14 -4160
+-262144 0;
+#X obj 108 387 hsl 101 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 105 417 0.05 \$1 0;
+#X obj 186 470 random 1000;
+#X obj 104 446 t l b;
+#X obj 105 501 pipe f f f 100;
+#X obj 105 539 pack f f f;
+#X text 19 81 pdt.granular is a 32 voice granular synthesis engine
+designed to be a starting point. The left inlet takes a list specifying
+lens size (0-1) \, start position (0-1) \, and pitch transposition.
+Bang center inlet to reset all voices to dsp off and ready to receive
+a message. Bang right inlet to load a sound file.;
+#X msg 273 330 1 0 0;
+#X msg 197 330 0.1 0.35 7;
+#X text 19 249 The control mechanism is meant to be flexible so that
+the user can define how they want to control the engine without having
+to modify or rewrite the abstraction.;
+#X text 19 164 Because 32 voices can take up a lot of cpu cycles all
+voices have a built in mechinism to turn their internal dsp off when
+they are at rest and awaiting instruction. Similarly when they are
+active a blocking mechanism is switched on so that new instructions
+can only be processed when the voice is done its current task.;
+#X text 198 309 send and instruction;
+#X text 62 367 asynchronize by delaying messages;
+#X text 481 195 count up pitch;
+#X text 625 144 randomize lens size and pitch;
+#X obj 365 432 pdt.granular~;
+#X msg 463 536;
+#X obj 365 536 pdt.master2~;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 1 0 34 0;
+#X connect 2 0 1 1;
+#X connect 2 1 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 1;
+#X connect 6 0 1 2;
+#X connect 7 0 10 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 2;
+#X connect 10 0 34 0;
+#X connect 11 0 13 0;
+#X connect 11 1 10 1;
+#X connect 11 2 8 0;
+#X connect 12 0 11 0;
+#X connect 13 0 7 0;
+#X connect 14 0 34 1;
+#X connect 16 0 34 2;
+#X connect 19 0 20 0;
+#X connect 20 0 22 0;
+#X connect 21 0 23 3;
+#X connect 22 0 23 0;
+#X connect 22 1 21 0;
+#X connect 23 0 24 0;
+#X connect 23 1 24 1;
+#X connect 23 2 24 2;
+#X connect 24 0 34 0;
+#X connect 26 0 34 0;
+#X connect 27 0 34 0;
+#X connect 34 0 36 0;
+#X connect 34 1 36 1;
+#X connect 34 2 35 0;

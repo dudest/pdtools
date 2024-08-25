@@ -1,0 +1,24 @@
+#N canvas 304 160 421 447 10;
+#X floatatom 27 396 5 0 0 0 - - -;
+#X obj 27 115 tgl 40 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 57 213 5 0 0 0 - - -;
+#X floatatom 89 246 5 0 0 0 - - -;
+#X obj 10 8 cnv 15 400 40 empty empty pdt.counter 20 12 0 14 -4160
+-262144 0;
+#X obj 27 168 metro 500;
+#X obj 27 341 pdt.counter 1 10;
+#X obj 120 282 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 156 281 bang to reset;
+#X text 134 248 2nd arguement: end;
+#X text 133 340 1st and 2nd arguemnet supplied at creation;
+#X text 101 212 1st arguement: increment;
+#X text 98 159 bang next;
+#X text 23 70 Simple counting object;
+#X connect 1 0 5 0;
+#X connect 2 0 6 1;
+#X connect 3 0 6 2;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 7 0 6 3;

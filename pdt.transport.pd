@@ -1,0 +1,31 @@
+#N canvas 0 22 474 324 10;
+#X obj 104 118 bng 40 250 50 0 start empty start 9 20 1 12 -62784 -1
+-262144;
+#X obj 120 171 nbx 5 14 0 1e+37 0 1 tempo set-tempo tempo 0 -6 1 10
+-62784 -262144 -1 130 256;
+#X obj 146 118 bng 40 250 50 0 stop empty stop 8 20 1 12 -62784 -1
+-262144;
+#X obj 269 207 noise~;
+#X obj 269 237 *~;
+#X obj 350 82 t b f;
+#X obj 350 126 /;
+#X msg 350 104 60000;
+#X obj 320 154 metro;
+#X obj 320 207 vline~;
+#X obj 269 263 dac~;
+#X msg 320 178 0.1 10 \, 0 10 10;
+#X obj 320 39 r record;
+#X obj 350 62 r tempo;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 4 0 10 1;
+#X connect 5 0 7 0;
+#X connect 5 1 6 1;
+#X connect 6 0 8 1;
+#X connect 7 0 6 0;
+#X connect 8 0 11 0;
+#X connect 9 0 4 1;
+#X connect 11 0 9 0;
+#X connect 12 0 8 0;
+#X connect 13 0 5 0;
+#X coords 0 -1 1 1 90 90 1 100 100;

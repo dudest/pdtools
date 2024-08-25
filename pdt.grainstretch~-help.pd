@@ -1,0 +1,39 @@
+#N canvas 406 102 512 477 10;
+#X obj 163 286 pdt.grainstretch~;
+#X obj 421 216 bng 40 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 215 222 hsl 101 15 -2 2 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 5350 1;
+#X obj 62 222 hsl 101 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 191 1;
+#X msg 246 179 1;
+#X msg 212 179 0.5;
+#X msg 311 179 2;
+#X msg 280 179 1.5;
+#X obj 7 -15 cnv 15 500 40 empty empty pdt.grainstretch~ 20 12 0 14
+-4160 -262144 0;
+#X text 393 189 load a soundfile;
+#X text 70 174 lens size;
+#X floatatom 59 250 5 0 0 0 - - -;
+#X floatatom 230 251 5 0 0 0 - - -;
+#X text 34 41 PD implimentation of a granular time stretching algorthm.
+Leftmost inlet is the lens size (0 - 1). Center inlet is time compression/expanstion
+\, 1 = %100 therefore values below 1 result in slowing down and above
+1 speeds up. Bang the rightmost outlet to load a sound file.;
+#X text 34 114 This object is stereo. loading a mono file will mean
+that sound will only play out the left outlet.;
+#X msg 262 319 /Users/alex/Documents/multimedia programming/pd_folder/synths/drumslice/sample.aif
+;
+#X obj 163 319 pdt.master2~;
+#X connect 0 0 16 0;
+#X connect 0 1 16 1;
+#X connect 0 2 15 0;
+#X connect 1 0 0 2;
+#X connect 2 0 0 1;
+#X connect 2 0 12 0;
+#X connect 3 0 0 0;
+#X connect 3 0 11 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 2 0;
+#X connect 7 0 2 0;

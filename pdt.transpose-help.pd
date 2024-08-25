@@ -1,0 +1,17 @@
+#N canvas 0 22 516 416 10;
+#X obj 7 -8 cnv 15 500 40 empty empty pdt.transpose 20 12 0 14 -4160
+-262144 0;
+#X obj 193 262 pdt.transpose 5;
+#X obj 193 174 pack;
+#X obj 193 145 makenote 127 1000;
+#X obj 193 306 print transposed;
+#X obj 209 198 print original;
+#X msg 193 113 60;
+#X floatatom 280 230 5 0 0 0 - - -;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 3 1 2 1;
+#X connect 6 0 3 0;
+#X connect 7 0 1 1;

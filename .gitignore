@@ -1,0 +1,2 @@
+# Don't track MacOS generated files
+.DS_Store

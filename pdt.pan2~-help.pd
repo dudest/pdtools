@@ -1,0 +1,18 @@
+#N canvas 283 241 329 397 10;
+#X obj 71 252 pdt.master~;
+#X obj 35 129 osc~ 220;
+#X obj 169 165 sig~;
+#X floatatom 169 123 0 0 1 0 - - -;
+#X obj 11 4 cnv 15 300 40 empty empty pdt.pan2~ 20 12 0 14 -4160 -262144
+0;
+#X text 21 57 Right inlet - input signal;
+#X text 19 94 left inlet - control signal between 0 - 1;
+#X obj 88 206 pdt.pan2~;
+#X obj 92 128 osc~ 225;
+#X text 20 76 Center inlet - input signal;
+#X connect 1 0 7 0;
+#X connect 2 0 7 2;
+#X connect 3 0 2 0;
+#X connect 7 0 0 0;
+#X connect 7 1 0 1;
+#X connect 8 0 7 1;
