@@ -2,6 +2,10 @@
 
 A collection of usefull PD abstractions.
 
+## Dependencies
+
+- cyclone
+
 ## Usage
 
 In PD preferences, include the collection folder to your *path*.
