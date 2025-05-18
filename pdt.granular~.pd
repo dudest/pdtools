@@ -1,12 +1,12 @@
-#N struct 1344-samplewindow float x float y array 1344-windowtemplate 1344-window;
-#N struct 1344-window float x float y;
+#N struct 1004-samplewindow float x float y array 1004-windowtemplate 1004-window;
+#N struct 1004-window float x float y;
 #N canvas 1238 444 948 641 10;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array \$0-file 2.67316e+06 float 2;
-#X coords 0 1 2.67316e+06 -1 200 50 1;
+#X array \$0-file 2.16269e+06 float 2;
+#X coords 0 1 2.16269e+06 -1 200 50 1;
 #X restore 703 138 graph;
 #N canvas 0 22 604 415 \$0-lens 0;
-#X scalar 1344-samplewindow 0 0 \; 0 0 \; 0 0 \; \;;
+#X scalar 1004-samplewindow 0 0 \; 104.076 0 \; 104.136 0 \; \;;
 #X coords 0 0 200 50 200 50 1;
 #X restore 703 138 pd \$0-lens;
 #X obj 515 119 openpanel;
@@ -176,7 +176,6 @@
 #X obj 98 226 unpack f f f;
 #X msg 608 145 set \$1;
 #X msg 514 389 set \$1 \$2;
-#X msg 588 119 symbol \$1;
 #X obj 35 285 s \$0-data;
 #X connect 2 0 3 0;
 #X connect 2 0 77 0;
@@ -201,7 +200,7 @@
 #X connect 28 0 27 0;
 #X connect 29 0 28 0;
 #X connect 31 0 2 0;
-#X connect 31 1 79 0;
+#X connect 31 1 3 0;
 #X connect 32 0 33 0;
 #X connect 67 0 66 0;
 #X connect 68 0 69 0;
@@ -212,11 +211,10 @@
 #X connect 73 0 70 0;
 #X connect 74 0 68 0;
 #X connect 74 1 76 0;
-#X connect 75 0 80 0;
+#X connect 75 0 79 0;
 #X connect 76 0 75 1;
 #X connect 76 1 75 2;
 #X connect 76 2 75 3;
 #X connect 77 0 30 0;
 #X connect 78 0 22 0;
-#X connect 79 0 3 0;
 #X coords 0 -1 1 1 206 95 1 700 100;
